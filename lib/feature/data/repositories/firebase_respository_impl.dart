@@ -43,8 +43,8 @@ class FirebaseRepositoryImpl implements FirebaseRepository {
   }
 
   @override
-  Future<void> signOut(UserEntity user) async {
-    return remoteDataSource.signOut(user);
+  Future<void> signOut() async {
+    return remoteDataSource.signOut();
   }
 
   @override

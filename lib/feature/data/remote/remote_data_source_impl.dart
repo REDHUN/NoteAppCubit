@@ -85,7 +85,7 @@ class RemoteDataSourceImpl implements RemoteDataSource {
   }
 
   @override
-  Future<void> signOut(UserEntity user) async {
+  Future<void> signOut() async {
     return auth.signOut();
   }
 

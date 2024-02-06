@@ -5,7 +5,7 @@ abstract class FirebaseRepository {
   Future<bool> isSignIn();
   Future<void> signIn(UserEntity user);
   Future<void> signUp(UserEntity user);
-  Future<void> signOut(UserEntity user);
+  Future<void> signOut();
   Future<String> getCurrentUid();
   Future<void> getCreateCurrentUser(UserEntity user);
   Future<void> addNewNote(NoteEntity note);

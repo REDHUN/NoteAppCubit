@@ -1,4 +1,3 @@
-import 'package:noteapp/feature/domain/entities/user_entity.dart';
 import 'package:noteapp/feature/domain/repositories/firebase_respository.dart';
 
 class SignOutUseCase {
@@ -6,7 +5,7 @@ class SignOutUseCase {
 
   SignOutUseCase({required this.repository});
 
-  Future<void> call(UserEntity user) async {
-    return repository.signOut(user);
+  Future<void> call() async {
+    return repository.signOut();
   }
 }
