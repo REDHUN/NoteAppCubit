@@ -6,7 +6,6 @@ import 'package:equatable/equatable.dart';
 import 'package:noteapp/feature/domain/entities/user_entity.dart';
 import 'package:noteapp/feature/domain/usecases/get_create_current_user_usecase.dart';
 import 'package:noteapp/feature/domain/usecases/sign_in_usecase.dart';
-import 'package:noteapp/feature/domain/usecases/sign_out_usecase.dart';
 import 'package:noteapp/feature/domain/usecases/sign_up_usecase.dart';
 
 part 'user_state.dart';
@@ -15,12 +14,11 @@ class UserCubit extends Cubit<UserState> {
   final SignInUseCase signInUseCase;
   final SignUpUseCase signUpUseCase;
   final GetCreateCurrentUserUseCase getCreateCurrentUserUseCase;
-  final SignOutUseCase signOutUseCase;
+
   UserCubit({
     required this.signInUseCase,
     required this.signUpUseCase,
     required this.getCreateCurrentUserUseCase,
-    required this.signOutUseCase,
   }) : super(UserInitial());
 
   Future<void> submitSignIn({required UserEntity user}) async {
